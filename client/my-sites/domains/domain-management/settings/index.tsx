@@ -22,6 +22,7 @@ import {
 import { getCurrentRoute } from 'calypso/state/selectors/get-current-route';
 import ConnectedDomainDetails from './cards/connected-domain-details';
 import RegisteredDomainDetails from './cards/registered-domain-details';
+import DnsRecords from './dns';
 import SetAsPrimary from './set-as-primary';
 import SettingsHeader from './settings-header';
 import type { SettingsPageConnectedProps, SettingsPageProps } from './types';
@@ -96,6 +97,17 @@ const Settings = ( {
 		return null;
 	};
 
+	const renderDnsRecords = () => {
+		return (
+			<Accordion
+				title={ translate( 'DNS records', { textOnly: true } ) }
+				subtitle={ translate( 'Connect your domain to other services', { textOnly: true } ) }
+			>
+				<DnsRecords />
+			</Accordion>
+		);
+	};
+
 	const renderSetAsPrimaryDomainSection = () => {
 		return <SetAsPrimary domain={ domain } selectedSite={ selectedSite } />;
 	};
@@ -106,6 +118,7 @@ const Settings = ( {
 			<>
 				{ renderDetailsSection() }
 				{ renderSetAsPrimaryDomainSection() }
+				{ renderDnsRecords() }
 			</>
 		);
 	};

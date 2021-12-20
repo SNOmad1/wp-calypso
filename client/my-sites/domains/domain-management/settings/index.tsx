@@ -112,6 +112,7 @@ const Settings = ( {
 					isRequestingDomains={ isRequestingDomains }
 					selectedDomainName={ selectedDomainName }
 					selectedSite={ selectedSite }
+					currentRoute={ currentRoute }
 				/>
 			</Accordion>
 		);

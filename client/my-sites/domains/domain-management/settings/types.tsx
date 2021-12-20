@@ -14,6 +14,8 @@ export type SettingsPageConnectedProps = {
 	domain: ResponseDomain;
 	isLoadingPurchase: boolean;
 	purchase: Purchase | null;
+	dns: any;
+	isRequestingDomains: boolean;
 };
 
 export type SettingsHeaderProps = {

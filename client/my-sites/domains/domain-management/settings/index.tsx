@@ -14,12 +14,14 @@ import DomainTransferInfoCard from 'calypso/my-sites/domains/domain-management/c
 import DomainMainPlaceholder from 'calypso/my-sites/domains/domain-management/components/domain/main-placeholder';
 import { domainManagementEdit, domainManagementList } from 'calypso/my-sites/domains/paths';
 import { getCurrentUserId } from 'calypso/state/current-user/selectors';
+import { getDomainDns } from 'calypso/state/domains/dns/selectors';
 import {
 	getByPurchaseId,
 	isFetchingSitePurchases,
 	hasLoadedSitePurchasesFromServer,
 } from 'calypso/state/purchases/selectors';
 import { getCurrentRoute } from 'calypso/state/selectors/get-current-route';
+import { isRequestingSiteDomains } from 'calypso/state/sites/domains/selectors';
 import ConnectedDomainDetails from './cards/connected-domain-details';
 import RegisteredDomainDetails from './cards/registered-domain-details';
 import DnsRecords from './dns';
@@ -30,7 +32,9 @@ import type { SettingsPageConnectedProps, SettingsPageProps } from './types';
 const Settings = ( {
 	currentRoute,
 	domain,
+	dns,
 	isLoadingPurchase,
+	isRequestingDomains,
 	purchase,
 	selectedDomainName,
 	selectedSite,
@@ -103,7 +107,11 @@ const Settings = ( {
 				title={ translate( 'DNS records', { textOnly: true } ) }
 				subtitle={ translate( 'Connect your domain to other services', { textOnly: true } ) }
 			>
-				<DnsRecords />
+				<DnsRecords
+					dns={ dns }
+					isRequestingDomains={ isRequestingDomains }
+					selectedDomainName={ selectedDomainName }
+				/>
 			</Accordion>
 		);
 	};
@@ -155,13 +163,14 @@ export default connect(
 		const purchase = subscriptionId
 			? getByPurchaseId( state, parseInt( subscriptionId, 10 ) )
 			: null;
-
 		return {
 			currentRoute: getCurrentRoute( state ),
 			domain: getSelectedDomain( ownProps )!,
 			isLoadingPurchase:
 				isFetchingSitePurchases( state ) || ! hasLoadedSitePurchasesFromServer( state ),
 			purchase: purchase && purchase.userId === currentUserId ? purchase : null,
+			dns: getDomainDns( state, ownProps.selectedDomainName ),
+			isRequestingDomains: isRequestingSiteDomains( state, ownProps.selectedSite.ID ),
 		};
 	}
 )( Settings );

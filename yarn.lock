@@ -199,7 +199,7 @@ __metadata:
     "@automattic/calypso-typescript-config": "workspace:^"
     "@automattic/create-calypso-config": "workspace:^"
     "@types/cookie": ^0.4.1
-    "@types/node": ^16.11.13
+    "@types/node": ^16.11.17
     cookie: ^0.4.0
     tslib: ^2.3.0
     typescript: ^4.5.4
@@ -229,7 +229,7 @@ __metadata:
     "@jest/globals": ^27.3.1
     "@types/config": ^0.0.40
     "@types/jest": ^27.0.3
-    "@types/node": ^16.11.13
+    "@types/node": ^16.11.17
     "@types/node-fetch": ^2.5.12
     "@types/totp-generator": ^0.0.3
     "@wordpress/i18n": ^4.2.4
@@ -418,7 +418,7 @@ __metadata:
   dependencies:
     "@automattic/calypso-typescript-config": "workspace:^"
     "@automattic/format-currency": "workspace:^"
-    "@types/validator": ^13.7.0
+    "@types/validator": ^13.7.1
     "@wordpress/api-fetch": ^5.2.6
     "@wordpress/data-controls": ^2.2.7
     "@wordpress/deprecated": ^3.2.3
@@ -576,7 +576,7 @@ __metadata:
     "@testing-library/jest-dom": ^5.16.1
     "@testing-library/react": ^12.1.2
     "@testing-library/react-hooks": 7.0.2
-    "@types/react": ^17.0.37
+    "@types/react": ^17.0.38
     "@wordpress/compose": ^5.0.6
     "@wordpress/i18n": ^4.2.4
     react: ^17.0.2
@@ -6694,10 +6694,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^16.11.13":
-  version: 16.11.13
-  resolution: "@types/node@npm:16.11.13"
-  checksum: 333857420b4672b88144fa4e67e5ce9b13776b2bf10f60e5f12d15515bcb5bbe9852dba53ed1777253c53215c666ce14c8f1b7d2d5367d7d002f1ef2a8d10bea
+"@types/node@npm:*, @types/node@npm:^16.11.17":
+  version: 16.11.17
+  resolution: "@types/node@npm:16.11.17"
+  checksum: 728037929c978867b88ed6135e2ccac8aa9d8f4dea524e17bf819ece87465ec33b6cc58c106594763b4c32eb84612104dc81e08991aba9b2e3191db4bbd74559
   languageName: node
   linkType: hard
 
@@ -6843,15 +6843,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-redux@npm:^7.1.20":
-  version: 7.1.20
-  resolution: "@types/react-redux@npm:7.1.20"
+"@types/react-redux@npm:^7.1.20, @types/react-redux@npm:^7.1.21":
+  version: 7.1.21
+  resolution: "@types/react-redux@npm:7.1.21"
   dependencies:
     "@types/hoist-non-react-statics": ^3.3.0
     "@types/react": "*"
     hoist-non-react-statics: ^3.3.0
     redux: ^4.0.0
-  checksum: bbdf56b17297e62484dd1fc9fe35f89410617518ed43532579380a183113df55c42a90729cfce5fd007dc00b8ed18f5e89554f8ed0413c31c0f7a5b20e2826ce
+  checksum: 917e52a33bd508b1daeb4fcbcc71449d402c6a3fcce52f76d10db8c17dd1c208da5c0c6e5ae2cecbd333f527e6e1bbc7646a96aa4cf21f816cd14dae8bd80674
   languageName: node
   linkType: hard
 
@@ -6903,14 +6903,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^17.0.37":
-  version: 17.0.37
-  resolution: "@types/react@npm:17.0.37"
+"@types/react@npm:^17.0.38":
+  version: 17.0.38
+  resolution: "@types/react@npm:17.0.38"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: af440f6281bd700a3b65146ff955f230243c8137a3c902e111d1e4ab5bf77724bf0e979cee286e51c7db76e6cdd505cd213c557f04831ca03a1767f7a7fcadba
+  checksum: 828cd27ac220be8232535c4451b0020f6f05535d62407e5fe2547544a7d3123777ed31ab547d7c7f3d8b59d37268ee4b9209f1c110809f084cbbf0a7e27cd7ef
   languageName: node
   linkType: hard
 
@@ -7048,10 +7048,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/validator@npm:^13.7.0":
-  version: 13.7.0
-  resolution: "@types/validator@npm:13.7.0"
-  checksum: 29b2b0459fe21044cb75c6c2bb5334f48c2edcba9c4605b2c23bbffd684833ca0226487efed8b4057e6fdad8715433ffe04f298dbab61713e7d72e6bdb3efeed
+"@types/validator@npm:^13.7.1":
+  version: 13.7.1
+  resolution: "@types/validator@npm:13.7.1"
+  checksum: 0570dc1e7b5ea0e20804b035d2a68d808540e0b6e902f41e2138171a82a977554939dea56ad174739369ae9df72515661c9bd9ef88667852ca2ff8cbb8e3a4d4
   languageName: node
   linkType: hard
 
@@ -37802,17 +37802,17 @@ testarmada-magellan@11.0.10:
     "@types/enzyme": ^3.10.10
     "@types/fast-json-stable-stringify": ^2.0.0
     "@types/lodash": ^4.14.178
-    "@types/node": ^16.11.13
+    "@types/node": ^16.11.17
     "@types/page": ^1.11.5
     "@types/qs": ^6.9.7
-    "@types/react": ^17.0.37
+    "@types/react": ^17.0.38
     "@types/react-modal": ^3.13.1
-    "@types/react-redux": ^7.1.20
+    "@types/react-redux": ^7.1.21
     "@types/react-router-dom": ^5.3.2
     "@types/react-transition-group": ^4.4.4
     "@types/store": ^2.0.2
     "@types/uuid": ^8.3.3
-    "@types/validator": ^13.7.0
+    "@types/validator": ^13.7.1
     "@types/webpack-env": ^1.16.3
     "@types/wordpress__api-fetch": ^3.2.4
     "@types/wordpress__block-editor": ^6.0.4
